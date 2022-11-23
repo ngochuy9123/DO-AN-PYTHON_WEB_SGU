@@ -1,0 +1,63 @@
+.main {
+    width: 960px;
+    margin: 0 auto;
+}
+
+.thuc-don img {
+    width: 20px;
+    height: 20px;
+}
+
+.thuc-don-ngang li {
+    float: left;
+    padding: 0 10px;
+}
+
+.col1,
+.col2 {
+    float: left
+}
+
+/*Trang chủ*/
+.col21,
+.col22 {
+    float: left;
+}
+
+.col21 img {
+    width: 30px;
+    height: 30px;
+}
+
+.cuoi-trang {
+    color: white;
+    background-color: blue;
+    clear: both;
+    text-align: center;
+}
+
+.tieu-de-sua {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.danh-sach-trang {
+    padding: 10px;
+    text-align: center;
+}
+
+.danh-sach-trang a {
+    padding: 0 5px;
+    border: 1px solid black;
+    margin: 5px;
+}
+
+.danh-sach-trang a:hover {
+    background-color: blue;
+    color: white;
+}
+
+#page1 table td {
+    border-collapse: collapse;
+    padding: 0 5px;
+}

@@ -1,0 +1,8 @@
+{% load static %}
+<ul>
+    <li><a href="{% url 'main' 0 %}"><img src="{% static "qlbansua/images/icon_homepage.gif"%}"/>Trang chủ</a></li>              
+    <li><a href="{% url 'them_sua_moi' %}"><img src="{% static "qlbansua/images/icon_insert.jpg"%}"/>Thêm sữa mới</a></li>  
+    <li><a href="{% url 'sua_ban_chay' %}"><img src="{% static "qlbansua/images/ba_gai_1.jpg"%}"/>Sữa bán chạy</a></li>  
+    <li><a href="{% url 'tim_kiem_sua' %}"><img src="{% static "qlbansua/images/icon_search.gif"%}"/>Tìm kiếm sữa</a></li>  
+    <li><a href="{% url 'them_khach_hang' %}"><img src="{% static "qlbansua/images/icon_insert.jpg"%}"/>Thêm khách hàng</a></li>
+</ul>

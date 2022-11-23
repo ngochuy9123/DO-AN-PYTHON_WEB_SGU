@@ -1,0 +1,71 @@
+{% load static %}
+<div id="page1" class="main">
+    <div class="col1">
+        <p id="sp">Sản phẩm theo hãng sữa</p>
+        <ul>
+            {% for hs  in dshs %}
+                <li><a href="{% url 'trang_chu' hs.ma_hang_sua 0 %}">{{hs.ten_hang_sua }}</a></li>
+            {% endfor %}
+        </ul>
+        <p>Sản phẩm theo loại</p>
+        <ul>
+            {% for ls  in dsls %}
+               <li><a href="{% url 'trang_chu' ls.ma_loai_sua 0 %}">{{ls.ten_loai}}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div class="col2">
+        <div class="thuc-don thuc-don-ngang">
+            {% include "./thuc-don.html" %}
+        </div>
+        <div class="col21">
+            <table border="1" width="100%">
+                <caption>DANH SÁCH SỮA</caption>
+                <thead>
+                    <tr>
+                        <th>Hình</th>
+                        <th>Tên sữa</th>
+                        <th>Trọng lượng</th>
+                        <th>Đơn giá</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% with donGia="120000" %}
+                    {% for s in dss %}   
+                    <tr>
+                        <td style="text-align: center;"><img src="{% static "qlbansua/images/"%}{{s.hinh}}"/></td>
+                        <td><a href="{% url 'thong_tin_sua' s.ma_sua %}">{{s.ten_sua}}</a></td>
+                        <td style="text-align: right;">{{s.trong_luong}}</td>
+                        <td style="text-align: right;">{{s.don_gia}}</td>
+                    </tr>
+                    {% endfor %}
+                    {% endwith %}
+                </tbody>
+            </table>
+            <div class="danh-sach-trang">
+            
+            {% if soTrang > 0 %}
+            
+                {% for i in tongSoTrang %} 
+                    
+                    
+                    <a href="{{i|add:-1}}"> {{i}} </a>
+                     
+                {% endfor %}
+            
+            {% endif %}
+            {% if soTrangHSLS > 0 %}
+            
+                {% for i in tongSoTrang %} 
+                    <a href="{% url 'trang_chu' id i|add:-1 %}"> {{i}} </a>
+                {% endfor %}
+            
+            {% endif %}
+
+            </div>
+        </div>
+        <div class="col22">
+            {% include  "./hinh-anh.html"%}
+        </div>
+    </div>
+</div>

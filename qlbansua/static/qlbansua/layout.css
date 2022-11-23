@@ -1,0 +1,43 @@
+/* 
+    trang chủ:              page1
+    trang thêm sữa mới:     page2
+    trang sữa bán chạy:     page3
+    trang tìm kiếm sữa:     page4
+    trang thêm khách hàng:  page5
+*/
+
+#page1 .col1 {
+    width: 200px;
+}
+
+#page1 .col2 {
+    width: 760px;
+}
+
+#page1 .col21 {
+    width: 600px;
+}
+
+#page1 .col22 {
+    width: 160px;
+}
+
+#page3 .col1 {
+    width: 260px;
+}
+
+#page3 .col2 {
+    width: 700px;
+}
+
+#page2 .col1,
+#page4 .col1,
+#page5 .col1 {
+    width: 360px;
+}
+
+#page2 .col2,
+#page4 .col2,
+#page5 .col2 {
+    width: 600px;
+}

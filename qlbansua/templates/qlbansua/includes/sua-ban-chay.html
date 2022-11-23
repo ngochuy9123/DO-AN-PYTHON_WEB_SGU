@@ -1,0 +1,31 @@
+{% load static %}
+<div id="page3" class="main">
+    <div class="col1">
+        <p>Danh sách sữa bán chạy</p>
+        <ul>
+            {% for s in dss %}
+                <li><a href="{% url 'sua_ban_chay_2' s.ma_sua %}">{{s.ten_sua}}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div class="col2">
+        <div class="thuc-don thuc-don-ngang">
+            {% include "./thuc-don.html" %}
+        </div>
+        <table>
+            <tr>
+                <td colspan="2" class="tieu-de-sua">{{sua.ten_sua}}</td>
+            </tr>
+            <tr>
+                <td><img src="{% static "qlbansua/images/"  %}{{sua.hinh}}"></td>
+                <td>
+                    <p><b><i>Thành phần dinh dưỡng:</i></b><br>{{sua.tp_dinh_duong}}</p>
+                    <p><b><i>Lợi ích:</i></b><br>{{sua.loi_ich}}</p>
+                    {% with donGia="120000" %}
+                    <p><b><i>Trọng lượng:</i></b> {{sua.trong_luong}} gr - <b><i>Đơn giá:</i></b> {{sua.don_gia}} đ</p>
+                    {% endwith %}
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}trang sua ban chay{% endblock title %} 
+{% block css_file %}
+  <link rel = "stylesheet" href="{% static "qlbansua/layout.css" %}">
+  <link rel = "stylesheet" href="{% static "qlbansua/style.css" %}">
+  <link rel = "stylesheet" href="{% static "qlbansua/reset.css" %}">
+{% endblock css_file %}
+  {% block content %}
+    {% include "./includes/dau-trang.html" %}
+    {% include "./includes/sua-ban-chay.html" %}
+    {% include "./includes/cuoi-trang.html" %}
+  {% endblock content %}
